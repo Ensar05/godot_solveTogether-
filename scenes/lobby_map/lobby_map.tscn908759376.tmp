@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dnvpilpsufaed"]
+
+[ext_resource type="PackedScene" uid="uid://d3mxqr2mt32m" path="res://models/lobby_map.glb" id="1_ipr4y"]
+[ext_resource type="PackedScene" uid="uid://cm7nvidv2clks" path="res://models/player/player.tscn" id="2_a67wk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a67wk"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_la00f"]
+sky_material = SubResource("ProceduralSkyMaterial_a67wk")
+
+[sub_resource type="Environment" id="Environment_24kti"]
+background_mode = 2
+sky = SubResource("Sky_la00f")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a67wk"]
+points = PackedVector3Array(-1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 57.02274, -1, 1, -1, 1, 1, 57.02274, -1, -1, 57.02274, 1, 1, 57.02274, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ipr4y"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[node name="lobby_map" unique_id=876131804 instance=ExtResource("1_ipr4y")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0" unique_id=1617998515]
+environment = SubResource("Environment_24kti")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1" unique_id=1740018013]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 3.3888042, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="room" parent_id_path=PackedInt32Array(1001403891) index="0" unique_id=890015064]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="room/StaticBody3D" index="0" unique_id=2055103729]
+shape = SubResource("ConvexPolygonShape3D_a67wk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceiling" parent_id_path=PackedInt32Array(924326321) index="0" unique_id=1693597905]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling/StaticBody3D" index="0" unique_id=318657553]
+shape = SubResource("ConvexPolygonShape3D_ipr4y")
+
+[node name="Player" parent="." index="4" unique_id=471617832 instance=ExtResource("2_a67wk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.21348381, 7.072114, -3.754886)
+
+[node name="Map" type="Node3D" parent="." index="5" unique_id=737928796]

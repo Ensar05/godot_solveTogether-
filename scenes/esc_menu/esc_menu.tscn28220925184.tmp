@@ -1,0 +1,356 @@
+[gd_scene format=3 uid="uid://broj5dac11424"]
+
+[ext_resource type="Script" uid="uid://w6uijgaolyhs" path="res://scenes/esc_menu/esc_menu.gd" id="1_4nfju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpnx3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qk38"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xu0p0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtirf"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nfju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2p04"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a3jj"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpak5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8l8me"]
+
+[node name="EscMenu" type="Control" unique_id=1439825717]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4nfju")
+
+[node name="SettingsPage" type="VBoxContainer" parent="." unique_id=825581958]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -475.25
+offset_top = -275.0
+offset_right = 475.25
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="SettingsTabs" type="HBoxContainer" parent="SettingsPage" unique_id=1398883756]
+layout_mode = 2
+
+[node name="General" type="Button" parent="SettingsPage/SettingsTabs" unique_id=1528852227]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wpnx3")
+text = "General"
+
+[node name="Graphics" type="Button" parent="SettingsPage/SettingsTabs" unique_id=1655378310]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5qk38")
+text = "Graphics"
+
+[node name="Audio" type="Button" parent="SettingsPage/SettingsTabs" unique_id=1883655201]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xu0p0")
+text = "Audio
+"
+
+[node name="GeneralSettings" type="VBoxContainer" parent="SettingsPage" unique_id=782366358]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="SettingsPage/GeneralSettings" unique_id=1700537505]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Language" type="LineEdit" parent="SettingsPage/GeneralSettings/Panel" unique_id=123775667]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Language"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/GeneralSettings/Panel/Language" unique_id=44499712]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Deutsch"
+popup/item_1/id = 1
+
+[node name="Panel2" type="Panel" parent="SettingsPage/GeneralSettings" unique_id=652030696]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="GraphicsSettings" type="VBoxContainer" parent="SettingsPage" unique_id=378229332]
+visible = false
+layout_mode = 2
+
+[node name="Window Mode" type="Panel" parent="SettingsPage/GraphicsSettings" unique_id=1143695536]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Window Mode" type="LineEdit" parent="SettingsPage/GraphicsSettings/Window Mode" unique_id=448319577]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Window Mode"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/GraphicsSettings/Window Mode/Window Mode" unique_id=470910402]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed Fullscreen"
+popup/item_2/id = 2
+
+[node name="Resolution" type="Panel" parent="SettingsPage/GraphicsSettings" unique_id=852007784]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Resolution" type="LineEdit" parent="SettingsPage/GraphicsSettings/Resolution" unique_id=157804323]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Resolution"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/GraphicsSettings/Resolution/Resolution" unique_id=1509135866]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed Fullscreen"
+popup/item_2/id = 2
+
+[node name="Framerate Limit" type="Panel" parent="SettingsPage/GraphicsSettings" unique_id=1623205915]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Framerate Limit" type="LineEdit" parent="SettingsPage/GraphicsSettings/Framerate Limit" unique_id=2112243928]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Framerate Limit"
+
+[node name="HSlider" type="HSlider" parent="SettingsPage/GraphicsSettings/Framerate Limit/Framerate Limit" unique_id=956721491]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 949.5
+offset_bottom = 60.0
+min_value = 30.0
+max_value = 480.0
+value = 30.0
+
+[node name="Vsync" type="Panel" parent="SettingsPage/GraphicsSettings" unique_id=384505827]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Vsync" type="LineEdit" parent="SettingsPage/GraphicsSettings/Vsync" unique_id=1153061412]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Vsync"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/GraphicsSettings/Vsync/Vsync" unique_id=1990140354]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 2
+popup/item_0/text = "On"
+popup/item_0/id = 0
+popup/item_1/text = "Off"
+popup/item_1/id = 1
+
+[node name="AudioSettings" type="VBoxContainer" parent="SettingsPage" unique_id=1517882819]
+visible = false
+layout_mode = 2
+
+[node name="Master Volume" type="Panel" parent="SettingsPage/AudioSettings" unique_id=1654062398]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Master Volume" type="LineEdit" parent="SettingsPage/AudioSettings/Master Volume" unique_id=1200726525]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Master Volume"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/AudioSettings/Master Volume/Master Volume" unique_id=1670966633]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed Fullscreen"
+popup/item_2/id = 2
+
+[node name="Music Volume" type="Panel" parent="SettingsPage/AudioSettings" unique_id=1877477694]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Music Volume" type="LineEdit" parent="SettingsPage/AudioSettings/Music Volume" unique_id=1590738685]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Music Volume"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/AudioSettings/Music Volume/Music Volume" unique_id=451540716]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed Fullscreen"
+popup/item_2/id = 2
+
+[node name="SFX Volume" type="Panel" parent="SettingsPage/AudioSettings" unique_id=1598446232]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="SFX Volume" type="LineEdit" parent="SettingsPage/AudioSettings/SFX Volume" unique_id=1368897128]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "SFX Volume"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/AudioSettings/SFX Volume/SFX Volume" unique_id=577662677]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed Fullscreen"
+popup/item_2/id = 2
+
+[node name="Player Voice" type="Panel" parent="SettingsPage/AudioSettings" unique_id=1795104125]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Player Voice" type="LineEdit" parent="SettingsPage/AudioSettings/Player Voice" unique_id=194170570]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 60.0
+text = "Player Voice"
+
+[node name="OptionButton" type="OptionButton" parent="SettingsPage/AudioSettings/Player Voice/Player Voice" unique_id=648209960]
+layout_mode = 0
+offset_left = 637.25
+offset_right = 951.25
+offset_bottom = 60.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed Fullscreen"
+popup/item_2/id = 2
+
+[node name="MainPage" type="VBoxContainer" parent="." unique_id=642898704]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.5
+offset_top = -95.5
+offset_right = 170.5
+offset_bottom = 95.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="MainPage" unique_id=1314560787]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtirf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4nfju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2p04")
+text = "Resume"
+
+[node name="Button2" type="Button" parent="MainPage" unique_id=1500476962]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtirf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4nfju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2p04")
+text = "Invite Friends"
+
+[node name="Button3" type="Button" parent="MainPage" unique_id=1946035495]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtirf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4nfju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2p04")
+text = "Settings"
+
+[node name="Button4" type="Button" parent="MainPage" unique_id=472469584]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtirf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4nfju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2p04")
+text = "Main Menu"
+
+[node name="Button5" type="Button" parent="MainPage" unique_id=1322320510]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a3jj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mpak5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8l8me")
+text = "Quit"
+
+[connection signal="editor_state_changed" from="SettingsPage/SettingsTabs/General" to="." method="_on_general_editor_state_changed"]
+[connection signal="pressed" from="SettingsPage/SettingsTabs/General" to="." method="_on_general_tab_pressed"]
+[connection signal="pressed" from="SettingsPage/SettingsTabs/Graphics" to="." method="_on_graphics_tab_pressed"]
+[connection signal="pressed" from="SettingsPage/SettingsTabs/Audio" to="." method="_on_audio_tab_pressed"]
+[connection signal="pressed" from="MainPage/Button" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MainPage/Button3" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainPage/Button4" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MainPage/Button5" to="." method="_on_quit_pressed"]

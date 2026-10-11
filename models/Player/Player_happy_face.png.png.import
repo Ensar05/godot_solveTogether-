@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnqhlnka0sqnn"
-path.s3tc="res://.godot/imported/Player_happy_face.png.png-736ba21fdf2a1f3d0c700c252572c58a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Player_happy_face.png.png-c01330d18306f1ba25340af0c4eb5f97.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://models/Player/Player_happy_face.png.png"
-dest_files=["res://.godot/imported/Player_happy_face.png.png-736ba21fdf2a1f3d0c700c252572c58a.s3tc.ctex"]
+source_file="res://models/player/Player_happy_face.png.png"
+dest_files=["res://.godot/imported/Player_happy_face.png.png-c01330d18306f1ba25340af0c4eb5f97.s3tc.ctex"]
 
 [params]
 

@@ -1,13 +1,6 @@
 [gd_scene format=3 uid="uid://vqj2vm1bb8bt"]
 
-[ext_resource type="PackedScene" uid="uid://d3mxqr2mt32m" path="res://models/lobby_map.glb" id="2_075iw"]
-
 [node name="World" type="Node3D" unique_id=1029520475]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=425589369]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1510004)
-
-[node name="Lobby" type="Node3D" parent="." unique_id=898537625]
-
-[node name="lobby_map" parent="." unique_id=876131804 instance=ExtResource("2_075iw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29260945, -0.9960518, -3.926519)

@@ -1,12 +1,12 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.0
 
 var mouse_sensitivity := 0.1 
 var rotation_x := 0.0
 var rotation_y := 0.0
+@export var movement = true
 
 @export var camera : Camera3D
 @export var esc_menu : Control
@@ -14,10 +14,13 @@ var rotation_y := 0.0
 @onready var settings_page: VBoxContainer = esc_menu.get_child(0)
 @onready var main_page: VBoxContainer = esc_menu.get_child(1)
 
+func toggleMove():
+	movement = not movement
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _physics_process(delta: float) -> void:
+func move(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -37,19 +40,23 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
-	move_and_slide()
+func _physics_process(delta: float) -> void:
+	if (movement): 
+		move(delta)
+		move_and_slide()
 	
 	# Handle Escape Menu Toggle
 	if Input.is_action_just_pressed("ui_escape"):
 		esc_menu.visible = not esc_menu.visible
-
+		
 		if esc_menu.visible:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			settings_page.hide()
 			main_page.show()
+			movement = false
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
+			movement = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -60,6 +67,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		rotation_degrees.y = rotation_y
 		camera.rotation_degrees.x = rotation_x
-		
-
-	

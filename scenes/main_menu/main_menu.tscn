@@ -28,25 +28,31 @@ script = ExtResource("1_fsom3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1720061540]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 50.0
-offset_top = -63.5
-offset_right = 386.0
-offset_bottom = 169.5
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.407
+anchor_right = 0.33100003
+anchor_bottom = 0.78300005
+offset_left = 0.4639969
+offset_top = -0.23599243
+offset_right = -0.31204224
+offset_bottom = 0.1159668
+grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 8
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=518904078]
+[node name="Start Game" type="Button" parent="VBoxContainer" unique_id=518904078]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=118052243]
+[node name="Load Game" type="Button" parent="VBoxContainer" unique_id=118052243]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
@@ -54,16 +60,18 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 text = "Load Game"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1947794611]
+[node name="Join Game" type="Button" parent="VBoxContainer" unique_id=1947794611]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 text = "Join Game"
 
-[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1565100678]
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=1565100678]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
@@ -73,18 +81,20 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="." unique_id=1151439032]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -267.5
-offset_top = 49.0
-offset_right = 267.5
-offset_bottom = 148.0
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.076000005
+anchor_right = 0.73200005
+anchor_bottom = 0.22800002
+offset_left = -18.668
+offset_top = -0.24800491
+offset_right = 0.23596191
+offset_bottom = 0.2559967
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 72
 text = "Solve Together!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Start Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
